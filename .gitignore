@@ -10,8 +10,8 @@ local.settings.json
 *.suo
 *.cscfg
 *.Cache
-*.vscode/*
-*.vscode
+.vscode
+.vscode/**
 project.lock.json
 
 /packages
@@ -24,7 +24,6 @@ project.lock.json
 .secrets
 appsettings.json
 local.settings.json
-
 node_modules
 dist
 
