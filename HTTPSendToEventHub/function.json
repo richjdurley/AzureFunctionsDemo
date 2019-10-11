@@ -17,10 +17,10 @@
       "name": "res"
     },
     {
-      "type": "EventHubTrigger",
+      "type": "eventHubTrigger",
       "name": "trip",
       "direction": "out",
-      "eventHubName": "ufc-transport",
+      "eventHubName": "trip",
       "connection": "ufctransportEventHub",
       "consumerGroup": "$Default",
       "dataType": "string"
