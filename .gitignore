@@ -11,7 +11,7 @@ local.settings.json
 *.cscfg
 *.Cache
 .vscode
-.vscode/**
+.vscode/*.json
 project.lock.json
 
 /packages
