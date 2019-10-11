@@ -1,0 +1,22 @@
+{  "disabled": false,
+  "bindings": [
+    {
+      "type": "EventHubTrigger",
+      "name": "trip",
+      "direction": "in",
+      "eventHubName": "ufc-transport",
+      "connection": "ufctransportEventHub",
+      "consumerGroup": "$Default",
+      "dataType": "string"
+    },
+    {
+      "type": "EventHubTrigger",
+      "name": "loadRoute",
+      "eventHubName": "testdaiintegration",
+      "connection": "daiintegrationEventHub",
+      "direction": "out",
+      "consumerGroup": "$Default",
+      "dataType": "string"
+    }
+  ]
+}

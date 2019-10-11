@@ -1,0 +1,29 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "route": "sendPayload",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "EventHubTrigger",
+      "name": "trip",
+      "direction": "out",
+      "eventHubName": "ufc-transport",
+      "connection": "ufctransportEventHub",
+      "consumerGroup": "$Default",
+      "dataType": "string"
+    }
+  ]
+}
