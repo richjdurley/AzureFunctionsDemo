@@ -10,7 +10,8 @@ local.settings.json
 *.suo
 *.cscfg
 *.Cache
-.vscode
+.vscode/
+vscode/
 .vscode/*.json
 project.lock.json
 
