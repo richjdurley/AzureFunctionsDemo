@@ -1,6 +1,6 @@
 {
     "version": "2.0",
-    "functions": ["HTTPSendToEventHub"],
+    "functions": ["HTTPSendToEventHub","OnHubReceiveTriggerMapSendToDAIHub"],
     "functionTimeout": "00:00:30",
     "extensionBundle": {
         "id": "Microsoft.Azure.Functions.ExtensionBundle",
