@@ -1,20 +1,22 @@
 {  "disabled": false,
   "bindings": [
-    {
-      "type": "EventHubTrigger",
-      "name": "trip",
+   {
+      "type": "eventHubTrigger",
+      "name": "tripTrigger",
       "direction": "in",
-      "eventHubName": "ufc-transport",
-      "connection": "ufctransportEventHub",
+      "eventHubName": "trip",
+      "connection": "ufctransportEventHubListen",
+      "storageConnection": "AzureWebJobsStorage",
       "consumerGroup": "$Default",
       "dataType": "string"
     },
     {
-      "type": "EventHubTrigger",
-      "name": "loadRoute",
-      "eventHubName": "testdaiintegration",
-      "connection": "daiintegrationEventHub",
+      "type": "eventHub",
+      "name": "loadroute",
       "direction": "out",
+      "eventHubName": "loadroute",
+      "connection": "daiintegrationEventHub",
+      "storageConnection": "AzureWebJobsStorage",
       "consumerGroup": "$Default",
       "dataType": "string"
     }

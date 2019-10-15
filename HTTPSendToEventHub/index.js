@@ -1,12 +1,13 @@
-module.exports = async function (context, req) {
+module.exports = async function (context) {
     context.log('JavaScript HTTP trigger function processed a request.');
-
-    if (req.body) {
-        context.bindings.ufctransportEventHub.pushpush(JSON.stringify(req.body));
-
+    console.log(JSON.stringify(context));
+    var body = context.req.body;
+    if (body) {
+        console.log(context.bindings.trip);
+        context.bindings.trip=JSON.stringify(body);
         context.res = {
             // status: 200, /* Defaults to 200 */
-            body: "sent " + (JSON.stringify(req.body))
+            body: "sent " + (JSON.stringify(body))
         };
     }
     else {

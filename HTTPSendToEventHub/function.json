@@ -12,16 +12,12 @@
       ]
     },
     {
-      "type": "http",
-      "direction": "out",
-      "name": "res"
-    },
-    {
-      "type": "EventHubTrigger",
+      "type": "eventHub",
       "name": "trip",
       "direction": "out",
-      "eventHubName": "ufc-transport",
+      "eventHubName": "trip",
       "connection": "ufctransportEventHub",
+      "storageConnection": "AzureWebJobsStorage",
       "consumerGroup": "$Default",
       "dataType": "string"
     }
