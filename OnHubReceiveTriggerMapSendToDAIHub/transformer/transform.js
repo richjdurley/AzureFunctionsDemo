@@ -9,7 +9,6 @@ module.exports = {
 
   transform_trip_to_loadRoute: function (trip) {
     var json;
-    console.log("IN TRANSFORMER");
     try {
       console.log("Received an Event with Header");
       console.log(trip.event.timestamp);
@@ -18,7 +17,7 @@ module.exports = {
       console.log(trip.event.traceId);
       if (trip.event.type == "com.acme.transport.shipping.api.Trip.tripFinalized") {
         console.log("Constructing loadRoute");
-        this.constructLoadRoute(trip);
+        return this.constructLoadRoute(trip);
       }
     } catch (error) {
       //TODO send to bad letter queue etc
@@ -30,6 +29,7 @@ module.exports = {
     return QUOTES + key + QUOTES + COLON + QUOTES + value + QUOTES;
   },
   constructLoadRoute: function (trip) {
+    console.log("Transforming To LoadRoute");
     json = BEGIN_BRACKET;
     json += this.jsonKeyStringValuePair('LoadRouteId', trip.vehicleTrip.tripId);
     json += COMMA;
@@ -50,10 +50,7 @@ module.exports = {
     json += this.jsonKeyStringValuePair('DropNumber', trip.vehicleTrip.stops[0].stopSequenceId);
     json += END_BRACKET;
     json += END_BRACKET;
-    console.log("Unparsed json: " + json);
-    console.log("Transformed to: " + JSON.stringify(json));
     return JSON.parse(json);
-
   }
 
 };
