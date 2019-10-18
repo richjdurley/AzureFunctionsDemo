@@ -39,6 +39,6 @@
 
 ### Outline Flow
 
-![outline](./hubs-and-functions?raw=true "Outline")
+![outline](./hubs-and-functions.png?raw=true "Outline")
 
 
