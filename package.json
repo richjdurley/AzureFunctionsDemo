@@ -7,6 +7,8 @@
   },
   "author": "",
   "dependencies": {
-    "@azure/event-hubs": "^2.1.1"
+    "@azure/event-hubs": "^2.1.1",
+    "http": "0.0.0",
+    "request": "^2.88.0"
   }
 }

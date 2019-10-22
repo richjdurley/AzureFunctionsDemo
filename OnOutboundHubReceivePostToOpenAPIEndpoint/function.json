@@ -1,0 +1,15 @@
+{  "disabled": false,
+    "bindings": [
+     {
+        "type": "eventHubTrigger",
+        "name": "daiTrigger",
+        "direction": "in",
+        "eventHubName": "loadRoute",
+        "connection": "daiintegrationEventHub",
+        "storageConnection": "AzureWebJobsStorage",
+        "consumerGroup": "$Default",
+        "dataType": "string"
+      }
+    ]
+  }
+  
