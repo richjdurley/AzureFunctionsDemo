@@ -35,7 +35,7 @@
 
 ### Adding a mock http endpoint to simulate webhook/funcion call to external resource
 - Install `npm install -g json-server` for mocking REST endpoints
-- To run mock server enter `json-server  --watch db.json`
+- To run mock server enter `json-server --port 3000  --watch db.json`
 
 ![outline](./hubs-and-function.png?raw=true "outline diagram")
 
