@@ -1,6 +1,6 @@
 {
     "version": "2.0",
-    "functions": ["HTTPTestInjectMessageToInboundHub","OnInboundHubReceiveTriggerMapSendToOutboundHub","OnOutboundHubReceivePostToOpenAPIEndpoint"],
+    "functions": ["HTTPTestInjectMessageToInboundHub","OnInboundHubReceiveTriggerTransformAndSendToOutboundHub","OnOutboundHubReceivePostToOpenAPIEndpoint"],
     "functionTimeout": "00:00:30",
     "extensionBundle": {
         "id": "Microsoft.Azure.Functions.ExtensionBundle",
