@@ -1,4 +1,4 @@
-var transform = require("./transformer/transform");
+var transform = require("./transformer/transformToDAIOpenAPIFormat");
 
 module.exports = 
 {
